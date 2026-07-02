@@ -4,409 +4,407 @@ By JATIBS
 */
 
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "logo": null,
-    "display": {
-        "separator": "  ",
-        "key": {
-            "type": "string"
-        },
-        "bar": {
-        },
-        "brightColor": false,
-        "color": {
-            "keys": "italic_white",
-            "output": "reset_light_white",
-            "separator": "bright_white"
-        },
-        "showErrors": true,
-        "stat": true,
-        "temp": {
-            "color": {
-                "green": "reset_green",
-                "red": "reset_red",
-                "yellow": "reset_yellow"
-            },
-            "ndigits": 2,
-            "unit": "D"
-        },
-        "size": {
-            "ndigits": 2,
-            "maxPrefix": "GB",
-            "spaceBeforeUnit": "never"
-        },
-        "percent": {
-            "ndigits": 1,
-            "color": {
-                "green": "green",
-                "red": "red",
-                "yellow": "yellow"
-            },
-            "spaceBeforeUnit": "never"
-        },
-        "hideCursor": false,
-        "freq": {
-            "ndigits": 2,
-            "spaceBeforeUnit": "never"
-        }
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": null,
+  "display": {
+    "separator": "  ",
+    "key": {
+      "type": "string",
     },
-    "general": {
-        "preRun": "clear; reset;",
-        "processingTimeout": 3210
+    "bar": {},
+    "brightColor": false,
+    "color": {
+      "keys": "reset_white",
+      "output": "reset_light_white",
+      "separator": "bright_white",
     },
-    "modules": [
-        {
-            "type": "custom",
-            // "key": "██████╗ ███████╗██████╗ ██╗ █████╗ ███╗   ██╗\n██╔══██╗██╔════╝██╔══██╗██║██╔══██╗████╗  ██║\n██║  ██║█████╗  ██████╔╝██║███████║██╔██╗ ██║\n██║  ██║██╔══╝  ██╔══██╗██║██╔══██║██║╚██╗██║\n██████╔╝███████╗██████╔╝██║██║  ██║██║ ╚████║\n╚═════╝ ╚══════╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ GNU/Linux",
-            // "key": "██████╗ ███████╗██████╗ ██╗ █████╗ ███╗   ██╗\n██╔══██╗██╔════╝██╔══██╗██║██╔══██╗████╗  ██║\n██║  ██║█████╗  ██████╔╝██║███████║██╔██╗ ██║ █▀█ █▄  █ █ █   █ █   █ █▄  █ █ █ █ █\n██║  ██║██╔══╝  ██╔══██╗██║██╔══██║██║╚██╗██║ █ ▄ █ █ █ █ █  █  █   █ █ █ █ █ █  █ \n██████╔╝███████╗██████╔╝██║██║  ██║██║ ╚████║ █▄█ █  ▀█ █▄█ █   █▄▄ █ █  ▀█ █▄█ █ █\n╚═════╝ ╚══════╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ======================================"
-            "key": "██████╗ ███████╗██████╗ ██╗ █████╗ ███╗   ██╗\n██╔══██╗██╔════╝██╔══██╗██║██╔══██╗████╗  ██║\n██║  ██║█████╗  ██████╔╝██║███████║██╔██╗ ██║ █▀▀█ █▄  █ █  █   █ █    █ █▄  █ █  █ ▀▄ ▄▀\n██║  ██║██╔══╝  ██╔══██╗██║██╔══██║██║╚██╗██║ █ ▄▄ █ █ █ █  █  █  █    █ █ █ █ █  █   █  \n██████╔╝███████╗██████╔╝██║██║  ██║██║ ╚████║ █▄▄█ █  ▀█ █▄▄█ █   █▄▄▄ █ █  ▀█ █▄▄█ ▄▀ ▀▄\n╚═════╝ ╚══════╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ===========================================",
-            "keyColor": "red"
-        },
-        //
-        //
-        //
-        {
-            "key": "System Operation ",
-            "type": "custom"
-        },
-        {
-            "type": "title",
-            "key": " ├──  user            :",
-            "format": "{user-name}@{host-name-colored}"
-        },
-        {
-            "type": "users",
-            "key": " ├──   users          :"
-        },
-        {
-            "type": "os",
-            "key": " ├──  distro          :"
-        },
-        {
-            "type": "kernel",
-            "key": " ├──  kernel          :"
-        },
-        {
-            "type": "initsystem",
-            "key": " ├── ⚙ init            :"
-        },
-        {
-            "type": "packages",
-            "format": "{} (apt/dpkg)",
-            "key": " ├──  packages        :"
-        },
-        {
-            "type": "processes",
-            "format": "{} processes",
-            "key": " ├──  processes       :"
-        },
-        {
-            "type": "uptime",
-            "key": " ├──   uptime         :"
-        },
-        {
-            "type": "datetime",
-            "key": " ├──  datetime        :"
-        },
-        {
-            "type": "locale",
-            "key": " ├── 󰏈 locale          :"
-        },
-        {
-            "type": "version",
-            "key": " └──  version         :"
-        },
-        //
-        //
-        //
-        "break",
-        {
-            "type": "custom",
-            "key": "DESKTOP & TERMINAL"
-        },
-        {
-            "type": "lm",
-            "key": " ├── 󰧨 desktop Mgr     :"
-        },
-        {
-            "type": "de",
-            "key": " ├── 󰧨 DE              :"
-        },
-        {
-            "key": " │   └──  DE theme    :",
-            "type": "theme"
-        },
-        {
-            "type": "wm",
-            "key": " ├──  window Mgr      :"
-        },
-        {
-            "type": "wmtheme",
-            "key": " │   └──  WM theme    :"
-        },
-        {
-            "type": "font",
-            "key": " ├──  system font     :"
-        },
-        {
-            "key": " ├──  icons           :",
-            "type": "icons"
-        },
-        {
-            "type": "cursor",
-            "key": " ├── 󰆿 cursor          :"
-        },
-        {
-            "type": "wallpaper",
-            "key": " ├── 󰸉 wallpaper       :"
-        },
-        {
-            "type": "terminal",
-            "key": " ├──  terminal        :"
-        },
-        {
-            "type": "shell",
-            "key": " │   ├──  shell       :"
-        },
-        {
-            "type": "terminalfont",
-            "key": " │   ├──  font        :"
-        },
-        {
-            "type": "terminalsize",
-            "key": " │   ├──  size        :"
-        },
-        {
-            "type": "terminaltheme",
-            "key": " │   ├──  theme       :"
-        },
-        {
-            "key": " │   └──  colors      :",
-            "type": "colors",
-            "symbol": "square"
-        },
-        {
-            "type": "editor",
-            "key": " └── 󱞁 editor          :"
-        },
-        //
-        //
-        //
-        "break",
-        {
-            "key": "HARDWARE & PERIPHERALS",
-            "type": "custom"
-        },
-        {
-            "type": "host",
-            "key": " ├── 󰌢 host            :"
-        },
-        {
-            "type": "chassis",
-            "key": " │   └─── chassis      :"
-        },
-        {
-            "type": "board",
-            "key": " ├── 󰚗 motherboard     :"
-        },
-        {
-            "type": "bios",
-            "key": " ├── 󰮌 BIOS            :"
-        },
-        {
-            "type": "bootmgr",
-            "key": " ├──  bootmanager     :"
-        },
-        {
-            "type": "tpm",
-            "key": " ├── 󰒒 TPM             :"
-        },
-        {
-            "type": "battery",
-            "key": " ├── 󰂄 battery         :"
-        },
-        {
-            "type": "poweradapter",
-            "key": " ├── 󰲸 poweradapter    :"
-        },
-        {
-            "type": "display",
-            "key": " ├── 󰍹 display         :"
-        },
-        {
-            "type": "monitor",
-            "key": " │   ├── 󰍹 monitor     :"
-        },
-        {
-            "type": "brightness",
-            "key": " │   └── 󰃞 brightness  :"
-        },
-        {
-            "type": "sound",
-            "key": " ├──  sound           :"
-        },
-        {
-            "type": "camera",
-            "key": " ├──  camera          :"
-        },
-        {
-            "type": "keyboard",
-            "key": " ├──  keyboard        :"
-        },
-        {
-            "type": "mouse",
-            "key": " ├── 󰍽 mouse           :"
-        },
-        {
-            "type": "gamepad",
-            "key": " ├── 󰺵 gamepad         :"
-        },
-        {
-            "type": "bluetooth",
-            "key": " ├── 󰂯 bluetooth       :"
-        },
-        {
-            "type": "bluetoothradio",
-            "key": " └── 󰂰 blueth radio    :"
-        },
-        //
-        //
-        //
-        "break",
-        {
-            "key": "PROCESSOR & GRAPHICS",
-            "type": "custom"
-        },
-        {
-            "type": "cpu",
-            "key": " ├──  processor       :",
-            "format": "{name} | {cores-physical}P/{cores-logical}L | ({cores-online} Online) | {freq-base} - {freq-max} | {temperature}",
-            "temp": true
+    "showErrors": true,
+    "stat": true,
+    "temp": {
+      "color": {
+        "green": "reset_green",
+        "red": "reset_red",
+        "yellow": "reset_yellow",
+      },
+      "ndigits": 2,
+      "unit": "D",
+    },
+    "size": {
+      "ndigits": 2,
+      "maxPrefix": "GB",
+      "spaceBeforeUnit": "never",
+    },
+    "percent": {
+      "ndigits": 1,
+      "color": {
+        "green": "green",
+        "red": "red",
+        "yellow": "yellow",
+      },
+      "spaceBeforeUnit": "never",
+    },
+    "hideCursor": false,
+    "freq": {
+      "ndigits": 2,
+      "spaceBeforeUnit": "never",
+    },
+  },
+  "general": {
+    "preRun": "clear; reset;",
+    "processingTimeout": 3210,
+  },
+  "modules": [
+    {
+      "type": "custom",
+      // "key": "██████╗ ███████╗██████╗ ██╗ █████╗ ███╗   ██╗\n██╔══██╗██╔════╝██╔══██╗██║██╔══██╗████╗  ██║\n██║  ██║█████╗  ██████╔╝██║███████║██╔██╗ ██║\n██║  ██║██╔══╝  ██╔══██╗██║██╔══██║██║╚██╗██║\n██████╔╝███████╗██████╔╝██║██║  ██║██║ ╚████║\n╚═════╝ ╚══════╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ GNU/Linux",
+      // "key": "██████╗ ███████╗██████╗ ██╗ █████╗ ███╗   ██╗\n██╔══██╗██╔════╝██╔══██╗██║██╔══██╗████╗  ██║\n██║  ██║█████╗  ██████╔╝██║███████║██╔██╗ ██║ █▀█ █▄  █ █ █   █ █   █ █▄  █ █ █ █ █\n██║  ██║██╔══╝  ██╔══██╗██║██╔══██║██║╚██╗██║ █ ▄ █ █ █ █ █  █  █   █ █ █ █ █ █  █ \n██████╔╝███████╗██████╔╝██║██║  ██║██║ ╚████║ █▄█ █  ▀█ █▄█ █   █▄▄ █ █  ▀█ █▄█ █ █\n╚═════╝ ╚══════╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ======================================"
+      "key": "██████╗ ███████╗██████╗ ██╗ █████╗ ███╗   ██╗\n██╔══██╗██╔════╝██╔══██╗██║██╔══██╗████╗  ██║\n██║  ██║█████╗  ██████╔╝██║███████║██╔██╗ ██║ █▀▀█ █▄  █ █  █   █ █    █ █▄  █ █  █ ▀▄ ▄▀\n██║  ██║██╔══╝  ██╔══██╗██║██╔══██║██║╚██╗██║ █ ▄▄ █ █ █ █  █  █  █    █ █ █ █ █  █   █  \n██████╔╝███████╗██████╔╝██║██║  ██║██║ ╚████║ █▄▄█ █  ▀█ █▄▄█ █   █▄▄▄ █ █  ▀█ █▄▄█ ▄▀ ▀▄\n╚═════╝ ╚══════╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ===========================================",
+      "keyColor": "red",
+    },
+    //
+    //
+    //
+    {
+      "key": "System Operation ",
+      "type": "custom",
+    },
+    {
+      "type": "title",
+      "key": " ├──  user            :",
+      "format": "{user-name}@{host-name-colored}",
+    },
+    {
+      "type": "users",
+      "key": " ├──   users          :",
+    },
+    {
+      "type": "os",
+      "key": " ├──  distro          :",
+    },
+    {
+      "type": "kernel",
+      "key": " ├──  kernel          :",
+    },
+    {
+      "type": "initsystem",
+      "key": " ├── ⚙ init            :",
+    },
+    {
+      "type": "packages",
+      "format": "{} (apt/dpkg)",
+      "key": " ├──  packages        :",
+    },
+    {
+      "type": "processes",
+      "format": "{} processes",
+      "key": " ├──  processes       :",
+    },
+    {
+      "type": "uptime",
+      "key": " ├──   uptime         :",
+    },
+    {
+      "type": "datetime",
+      "key": " ├──  datetime        :",
+    },
+    {
+      "type": "locale",
+      "key": " ├── 󰏈 locale          :",
+    },
+    {
+      "type": "version",
+      "key": " └──  version         :",
+    },
+    //
+    //
+    //
+    "break",
+    {
+      "type": "custom",
+      "key": "DESKTOP & TERMINAL",
+    },
+    {
+      "type": "lm",
+      "key": " ├── 󰧨 desktop Mgr     :",
+    },
+    {
+      "type": "de",
+      "key": " ├── 󰧨 DE              :",
+    },
+    {
+      "key": " │   └──  DE theme    :",
+      "type": "theme",
+    },
+    {
+      "type": "wm",
+      "key": " ├──  window Mgr      :",
+    },
+    {
+      "type": "wmtheme",
+      "key": " │   └──  WM theme    :",
+    },
+    {
+      "type": "font",
+      "key": " ├──  system font     :",
+    },
+    {
+      "key": " ├──  icons           :",
+      "type": "icons",
+    },
+    {
+      "type": "cursor",
+      "key": " ├── 󰆿 cursor          :",
+    },
+    {
+      "type": "wallpaper",
+      "key": " ├── 󰸉 wallpaper       :",
+    },
+    {
+      "type": "terminal",
+      "key": " ├──  terminal        :",
+    },
+    {
+      "type": "shell",
+      "key": " │   ├──  shell       :",
+    },
+    {
+      "type": "terminalfont",
+      "key": " │   ├──  font        :",
+    },
+    {
+      "type": "terminalsize",
+      "key": " │   ├──  size        :",
+    },
+    {
+      "type": "terminaltheme",
+      "key": " │   ├──  theme       :",
+    },
+    {
+      "key": " │   └──  colors      :",
+      "type": "colors",
+      "symbol": "square",
+    },
+    {
+      "type": "editor",
+      "key": " └── 󱞁 editor          :",
+    },
+    //
+    //
+    //
+    "break",
+    {
+      "key": "HARDWARE & PERIPHERALS",
+      "type": "custom",
+    },
+    {
+      "type": "host",
+      "key": " ├── 󰌢 host            :",
+    },
+    {
+      "type": "chassis",
+      "key": " │   └─── chassis      :",
+    },
+    {
+      "type": "board",
+      "key": " ├── 󰚗 motherboard     :",
+    },
+    {
+      "type": "bios",
+      "key": " ├── 󰮌 BIOS            :",
+    },
+    {
+      "type": "bootmgr",
+      "key": " ├──  bootmanager     :",
+    },
+    {
+      "type": "tpm",
+      "key": " ├── 󰒒 TPM             :",
+    },
+    {
+      "type": "battery",
+      "key": " ├── 󰂄 battery         :",
+    },
+    {
+      "type": "poweradapter",
+      "key": " ├── 󰲸 poweradapter    :",
+    },
+    {
+      "type": "display",
+      "key": " ├── 󰍹 display         :",
+    },
+    {
+      "type": "monitor",
+      "key": " │   ├── 󰍹 monitor     :",
+    },
+    {
+      "type": "brightness",
+      "key": " │   └── 󰃞 brightness  :",
+    },
+    {
+      "type": "sound",
+      "key": " ├──  sound           :",
+    },
+    {
+      "type": "camera",
+      "key": " ├──  camera          :",
+    },
+    {
+      "type": "keyboard",
+      "key": " ├──  keyboard        :",
+    },
+    {
+      "type": "mouse",
+      "key": " ├── 󰍽 mouse           :",
+    },
+    {
+      "type": "gamepad",
+      "key": " ├── 󰺵 gamepad         :",
+    },
+    {
+      "type": "bluetooth",
+      "key": " ├── 󰂯 bluetooth       :",
+    },
+    {
+      "type": "bluetoothradio",
+      "key": " └── 󰂰 blueth radio    :",
+    },
+    //
+    //
+    //
+    "break",
+    {
+      "key": "PROCESSOR & GRAPHICS",
+      "type": "custom",
+    },
+    {
+      "type": "cpu",
+      "key": " ├──  processor       :",
+      "format": "{name} | {cores-physical}P/{cores-logical}L | ({cores-online} Online) | {freq-base} - {freq-max} | {temperature}",
+      "temp": true,
+    },
+    {
+      "type": "cpucache",
+      "key": " │   ├── cache         :",
+    },
+    {
+      "type": "cpuusage",
+      "key": " │   ├── usage         :",
+    },
+    {
+      "type": "loadavg",
+      "key": " │   └──  loadavg     :",
+    },
+    {
+      "type": "gpu",
+      "key": " └── 󰢮  graphics       :",
+    },
+    {
+      "type": "opengl",
+      "key": "     ├── opengl        :",
+    },
+    {
+      "type": "opencl",
+      "key": "     ├── opencl        :",
+    },
+    {
+      "type": "vulkan",
+      "key": "     └── vulkan        :",
+    },
+    //
+    //
+    //
+    //MEMORY & STORAGE
+    "break",
+    {
+      "type": "custom",
+      "key": "MEMORY & STORAGE",
+    },
+    {
+      "type": "memory",
+      "key": " ├──  RAM             :",
+    },
+    {
+      "type": "physicalmemory",
+      "key": " ├──  physicalmem     :",
+    },
+    {
+      "type": "swap",
+      "key": " ├── 󰓡 Swap            :",
+    },
+    {
+      "type": "physicaldisk",
+      "key": " ├── 󰋊 physicaldisk    :",
+      "format": "{physical-type} {interconnect} {size} {removable-type} | {temperature}",
+      "temp": true,
+    },
+    {
+      "type": "disk",
+      "key": " │    ├── part.        :",
+      "format": "[{name}] {mount-from}:{mountpoint} {filesystem}  {size-used}/{size-total} ({size-percentage})",
+    },
+    {
+      "type": "diskio",
+      "key": " │    └── diskio       :",
+    },
+    {
+      "type": "btrfs",
+      "key": " ├── 󱧶 btrfs           :",
+    },
+    {
+      "type": "zpool",
+      "key": " └── 󱧶 ZFS Pool        :",
+    },
+    //
+    //
+    //
+    "break",
+    {
+      "type": "custom",
+      "key": "NETWORK",
+    },
+    {
+      "type": "wifi",
+      "key": " ├──  Wifi            :",
+    },
+    {
+      "type": "localip",
+      "key": " ├── 󰩠 Local IP        :",
+    },
+    {
+      "type": "publicip",
+      "key": " ├── 󰩠 Public IP       :",
+    },
+    {
+      "type": "netio",
+      "key": " ├── 󰞕󰞒 Traffic I/O    :",
+    },
+    {
+      "type": "dns",
+      "key": " └── 󰮌 DNS             :",
+      "format": "{result}",
+    },
 
-        },
-        {
-            "type": "cpucache",
-            "key": " │   ├── cache         :"
-        },
-        {
-            "type": "cpuusage",
-            "key": " │   ├── usage         :"
-        },
-        {
-            "type": "loadavg",
-            "key": " │   └──  loadavg     :"
-        },
-        {
-            "type": "gpu",
-            "key": " └── 󰢮  graphics       :"
-        },
-        {
-            "type": "opengl",
-            "key": "     ├── opengl        :"
-        },
-        {
-            "type": "opencl",
-            "key": "     ├── opencl        :"
-        },
-        {
-            "type": "vulkan",
-            "key": "     └── vulkan        :"
-        },
-        //
-        //
-        //
-        //MEMORY & STORAGE
-        "break",
-        {
-            "type": "custom",
-            "key": "MEMORY & STORAGE"
-        },
-        {
-            "type": "memory",
-            "key": " ├──  RAM             :"
-        },
-        {
-            "type": "physicalmemory",
-            "key": " ├──  physicalmem     :"
-        },
-        {
-            "type": "swap",
-            "key": " ├── 󰓡 Swap            :"
-        },
-        {
-            "type": "physicaldisk",
-            "key": " ├── 󰋊 physicaldisk    :",
-            "format": "{physical-type} {interconnect} {size} {removable-type} | {temperature}",
-            "temp": true
-        },
-        {
-            "type": "disk",
-            "key": " │    ├── part.        :",
-            "format": "[{name}] {mount-from}:{mountpoint} {filesystem}  {size-used}/{size-total} ({size-percentage})"
-        },
-        {
-            "type": "diskio",
-            "key": " │    └── diskio       :"
-        },
-        {
-            "type": "btrfs",
-            "key": " ├── 󱧶 btrfs           :"
-        },
-        {
-            "type": "zpool",
-            "key": " └── 󱧶 ZFS Pool        :"
-        },
-        //
-        //
-        //
-        "break",
-        {
-            "type": "custom",
-            "key": "NETWORK"
-        },
-        {
-            "type": "wifi",
-            "key": " ├──  Wifi            :"
-        },
-        {
-            "type": "localip",
-            "key": " ├── 󰩠 Local IP        :"
-        },
-        {
-            "type": "publicip",
-            "key": " ├── 󰩠 Public IP       :"
-        },
-        {
-            "type": "netio",
-            "key": " ├── 󰞕󰞒 Traffic I/O    :"
-        },
-        {
-            "type": "dns",
-            "key": " └── 󰮌 DNS             :",
-            "format": "{result}"
-        },
-
-        "break",
-        //
-        //
-        //
-        {
-            "type": "custom",
-            "key": "MEDIA & WEATHER"
-        },
-        {
-            "type": "media",
-            "key": " ├──  media           :"
-        },
-        {
-            "type": "player",
-            "key": " ├── 󰲸 player          :"
-        },
-        {
-            "type": "weather",
-            "key": " └── 󱣖 weather         :",
-            "timeout": 7777
-        },
-        "break"
-    ]
+    "break",
+    //
+    //
+    //
+    {
+      "type": "custom",
+      "key": "MEDIA & WEATHER",
+    },
+    {
+      "type": "media",
+      "key": " ├──  media           :",
+    },
+    {
+      "type": "player",
+      "key": " ├── 󰲸 player          :",
+    },
+    {
+      "type": "weather",
+      "key": " └── 󱣖 weather         :",
+      "timeout": 7777,
+    },
+    "break",
+  ],
 }
